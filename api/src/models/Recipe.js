@@ -7,7 +7,7 @@ module.exports = (sequelize) => {
     id:{
       type: DataTypes.UUID,
       defaultValue: DataTypes.UUIDV4,
-      allowNull: false,
+      //allowNull: false,
       primaryKey: true
     },
     name: {
@@ -26,9 +26,13 @@ module.exports = (sequelize) => {
       type: DataTypes.REAL,
       allowNull: false,
     },
-    StepByStep: {
+    stepByStep: {
       type: DataTypes.STRING,
       allowNull: false,
     },
+    created: {
+      type: DataTypes.BOOLEAN,
+      defaultValue: true
+    }
   });
 };
